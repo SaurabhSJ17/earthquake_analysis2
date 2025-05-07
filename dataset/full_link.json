@@ -5,10 +5,16 @@
 			"referenceName": "RestService1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"daily_path": {
+				"type": "string",
+				"defaultValue": "/all_month.geojson "
+			}
+		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "/all_month.geojson "
+			"relativeUrl": ""
 		},
 		"schema": []
 	}
