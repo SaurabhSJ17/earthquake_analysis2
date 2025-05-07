@@ -1,0 +1,22 @@
+{
+	"name": "daily_data_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storage_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "bronze_layer/daily_data/@(formatDateTime(utcNow(),'yyyyMMdd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "sjcontainer"
+			}
+		},
+		"schema": {}
+	}
+}
