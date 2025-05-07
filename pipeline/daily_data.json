@@ -80,9 +80,10 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "daily_data_dataset",
+						"referenceName": "lookup_daily",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
