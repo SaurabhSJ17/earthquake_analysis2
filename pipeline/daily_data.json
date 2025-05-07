@@ -38,7 +38,10 @@
 				"inputs": [
 					{
 						"referenceName": "full_link",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"daily_path": "all_day.geojson"
+						}
 					}
 				],
 				"outputs": [
@@ -100,7 +103,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output",
+						"value": "@activity('Lookup1').output.value[0].features",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -118,8 +121,50 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "00:01:40",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"paginationRules": {
+										"supportRFC5988": "true"
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									}
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "Rest_daily_details",
+									"type": "DatasetReference",
+									"parameters": {
+										"id": {
+											"value": "@item().id",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "daily_details_gen2",
+									"type": "DatasetReference",
+									"parameters": {
+										"id": {
+											"value": "@item().id",
+											"type": "Expression"
+										}
+									}
+								}
+							]
 						}
 					]
 				}

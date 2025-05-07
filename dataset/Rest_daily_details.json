@@ -1,0 +1,23 @@
+{
+	"name": "Rest_daily_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "daily_details",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"id": {
+				"type": "array"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@{dataset().id}.geojson",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}

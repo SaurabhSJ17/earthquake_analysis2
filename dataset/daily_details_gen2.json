@@ -1,0 +1,31 @@
+{
+	"name": "daily_details_gen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storage_gen2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"id": {
+				"type": "array"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{dataset().id}.json",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "bronze_layer/daily_details/@{formatDateTime(utcNow(),'yyyyMMdd')}",
+					"type": "Expression"
+				},
+				"fileSystem": "sjcontainer"
+			}
+		},
+		"schema": {}
+	}
+}
