@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "bronze_layer/daily_data/@(formatDateTime(utcNow(),'yyyyMMdd'))",
+					"value": "@concat('bronze_layer/daily_data/', formatDateTime(utcNow(), 'yyyyMMdd'))\n",
 					"type": "Expression"
 				},
 				"fileSystem": "sjcontainer"

@@ -8,13 +8,13 @@
 		"parameters": {
 			"daily_path": {
 				"type": "string",
-				"defaultValue": "/all_month.geojson "
+				"defaultValue": "all_day.geojson"
 			}
 		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": ""
+			"relativeUrl": "@dataset().daily_path"
 		},
 		"schema": []
 	}
