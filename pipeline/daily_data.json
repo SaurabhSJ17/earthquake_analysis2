@@ -38,7 +38,10 @@
 				"inputs": [
 					{
 						"referenceName": "full_link",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"daily_path": "all_day.geojson"
+						}
 					}
 				],
 				"outputs": [
