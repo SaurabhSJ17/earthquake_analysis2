@@ -10,9 +10,12 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "daily_data.json",
+				"fileName": {
+					"value": "daily_data@{formatDateTime(addDays(utcNow(),-1),'yyyyMMdd')}.jeojson",
+					"type": "Expression"
+				},
 				"folderPath": {
-					"value": "bronze_layer/daily_data/@{formatDateTime(utcNow(),'yyyyMMdd')}",
+					"value": "bronze_layer/daily_data/@{formatDateTime(addDays(utcNow(),-1),'yyyyMMdd')}",
 					"type": "Expression"
 				},
 				"fileSystem": "sjcontainer"
