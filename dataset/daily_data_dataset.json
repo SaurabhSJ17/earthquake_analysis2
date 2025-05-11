@@ -18,7 +18,7 @@
 					"value": "bronze_layer/daily_data/@{formatDateTime(addDays(utcNow(),-1),'yyyy-MM-dd')}",
 					"type": "Expression"
 				},
-				"fileSystem": "sj-container"
+				"fileSystem": "sj-container2"
 			}
 		},
 		"schema": {}
