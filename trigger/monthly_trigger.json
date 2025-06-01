@@ -1,0 +1,29 @@
+{
+	"name": "monthly_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "daily_data",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Month",
+				"interval": 1,
+				"startTime": "2025-06-02T18:27:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"monthDays": [
+						2
+					]
+				}
+			}
+		}
+	}
+}

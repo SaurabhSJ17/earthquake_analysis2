@@ -11,11 +11,11 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "daily_data@{formatDateTime(addDays(utcNow(),-1),'yyyy-MM-dd')}.json",
+					"value": "monthl_data@{formatDateTime(addDays(utcNow(),-1),'yyyy-MM-dd')}.json",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "bronze_layer/daily_data/@{formatDateTime(addDays(utcNow(),-1),'yyyy-MM-dd')}",
+					"value": "bronze_layer/month_data/@{formatDateTime(addDays(utcNow(),-1),'yyyy-MM-dd')}",
 					"type": "Expression"
 				},
 				"fileSystem": "sj-container2"
