@@ -1,0 +1,9 @@
+{
+	"name": "Earthquake-df",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "90158855-fa98-44a6-bdd6-aae62d38d7d1",
+		"tenantId": "14e9841a-89c1-4e49-a26b-2288de694936"
+	}
+}
