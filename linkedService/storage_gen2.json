@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "AzureBlobFS",
 		"typeProperties": {
-			"url": "https://earthquakestorageac5.dfs.core.windows.net/"
+			"url": "https://model1storage.dfs.core.windows.net/"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
