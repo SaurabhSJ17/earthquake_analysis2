@@ -1,0 +1,9 @@
+{
+	"name": "model1-df",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "55cde037-43b0-4087-ada3-d2a946f8b656",
+		"tenantId": "14e9841a-89c1-4e49-a26b-2288de694936"
+	}
+}
